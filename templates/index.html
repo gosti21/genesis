@@ -1,18 +1,48 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    </head>
-    <body>
-        <nav>
-            <h1>Portafolio</h1>
-        </nav>
-        <main>
-            <strong>Software FullStack Delevoper</strong>
-            <img src="{{ url_for('static', filename='images/foto.png') }}"></script>
-   
-        </main>
-        <script src="{{ url_for('static', filename='app.js')}}"></script>
-    </body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio Profesional</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#acerca-de">Acerca de</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="acerca-de">
+        <h1>Acerca de mí</h1>
+        <p>Hola, soy Zambrano Candiotti Sergio, un profesional con experiencia en desarrollo web y diseño. Me apasiona crear soluciones digitales y siempre estoy buscando aprender y crecer en el campo de la tecnología.</p>
+        <img src="tu-foto.jpg" alt="Foto de perfil">
+        <p>Con habilidades en HTML, CSS, JavaScript y más, me especializo en crear sitios web responsivos y optimizados. Siempre busco llevar mis proyectos al siguiente nivel, con atención al detalle y un enfoque en la experiencia del usuario.</p>
+    </section>
+
+    <section id="contacto">
+        <h1>Contacto</h1>
+        <p>Si deseas ponerte en contacto conmigo, no dudes en llenar el siguiente formulario:</p>
+        <form action="enviar_formulario.php" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 [Tu Nombre]. Todos los derechos reservados.</p>
+    </footer>
+</body>
 </html>
